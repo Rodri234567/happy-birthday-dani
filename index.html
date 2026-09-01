@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Dani</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Intro overlay with 10s countdown -->
+  <div id="overlay" class="overlay">
+    <div class="overlay-card">
+      <h2>¡Sorpresa, Daniela!</h2>
+      <p class="sub">Prepárate... en</p>
+      <div id="count">10</div>
+      <p class="tiny">Toca o presiona cualquier tecla para saltar</p>
+    </div>
+  </div>
+
+  <!-- Main slideshow container -->
+  <main id="slides" class="slides" tabindex="0">
+    <!-- Slide 1: cover -->
+    <section class="slide slide-hero">
+      <div class="decor decor-left">
+        <img src="assets/lily.svg" class="sticker s1" alt="lily">
+        <img src="assets/pochacco.svg" class="sticker s2" alt="pochacco">
+      </div>
+      <div class="hero">
+        <h1>Happy Birthday Dani</h1>
+        <h3>Daniela — 29 de septiembre — 18 años</h3>
+        <p class="lead">Que este día esté lleno de risas, lirios y cosas hermosas.</p>
+        <button id="nextBtn" class="btn">Tocar para continuar</button>
+      </div>
+      <div class="decor decor-right">
+        <img src="assets/lily.svg" class="sticker s3" alt="lily2">
+      </div>
+    </section>
+
+    <!-- Slide 2: message / gallery -->
+    <section class="slide slide-msg">
+      <div class="content">
+        <h2>Daniela, ¡Feliz 18!</h2>
+        <p class="lead">Hoy celebramos tu vida, tus sueños y todo lo hermoso que traes al mundo.</p>
+        <div class="gallery">
+          <div class="card-img">
+            <!-- user photo placeholder: replace assets/dani-photo.jpg to use actual picture -->
+            <div class="photo-placeholder">Tu foto aquí</div>
+          </div>
+          <div class="stickers-row">
+            <img src="assets/pochacco.svg" class="sticker-lg" alt="pochacco">
+            <img src="assets/lily.svg" class="sticker-lg" alt="lily">
+          </div>
+        </div>
+        <p class="tiny">Toca para avanzar o usa las flechas ← →</p>
+      </div>
+    </section>
+
+    <!-- Slide 3: music + final -->
+    <section class="slide slide-final">
+      <div class="content">
+        <h2>¡A celebrar!</h2>
+        <p class="lead">Dale play a la canción y disfruta.</p>
+        <div class="music">
+          <a class="btn blue" id="playMusic" target="_blank" href="https://www.youtube.com/watch?v=T89IqbAF9Ik">Abrir canción (YouTube)</a>
+          <button class="btn" id="confetti">Lanzar confetti</button>
+        </div>
+        <div id="confettiCanvas" class="confetti"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

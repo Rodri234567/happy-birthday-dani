@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- assets/lily.svg - simple lily flower sticker (vector) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 200 200">
+  <g transform="translate(100,100)">
+    <path d="M0,-30 C12,-18 28,-12 30,8 C8,2 0,22 0,22 C0,22 -8,2 -30,8 C-28,-12 -12,-18 0,-30 Z" fill="#ffd6e0" stroke="#ff7aa2" stroke-width="2" />
+    <rect x="-4" y="8" width="8" height="38" fill="#7fb069" />
+    <ellipse cx="0" cy="46" rx="10" ry="6" fill="#4a7c59" />
+  </g>
+</svg>

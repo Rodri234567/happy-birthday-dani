@@ -1,0 +1,47 @@
+/* styles.css - Happy Birthday Dani */
+:root{
+  --bg:#caf0f8; /* celeste claro */
+  --accent:#ff7aa2;
+  --text:#1b1b1b;
+  --card:#ffffffcc;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,var(--bg),#e8f9ff);color:var(--text)}
+.overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(10,20,30,0.15);backdrop-filter:blur(4px);z-index:30}
+.overlay-card{background:var(--card);padding:28px;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.12);text-align:center;min-width:260px}
+.overlay-card h2{margin:0;color:var(--accent);font-size:1.6rem}
+.overlay-card .sub{margin:8px 0 2px}
+#count{font-size:3.6rem;font-weight:700;margin:6px;color:#086788}
+.tiny{font-size:.8rem;color:#555;margin-top:8px}
+
+.slides{height:100vh;overflow:hidden;outline:none}
+.slide{height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;transition:transform .7s cubic-bezier(.2,.9,.2,1);}
+.slide-hero{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hero{flex:1;text-align:center}
+.hero h1{font-size:3rem;margin:10px 0;color:#05445E}
+.hero h3{margin:6px 0;color:#2b6f81}
+.lead{font-size:1.1rem;color:#073B4C}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn.blue{background:#2b8fb8}
+
+.decor{width:160px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.sticker{width:120px;transform-origin:center;animation:float 6s ease-in-out infinite}
+.sticker-lg{width:140px;margin:6px}
+.sticker.s2{animation-duration:5s}
+.sticker.s3{animation-duration:7s}
+@keyframes float{0%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}100%{transform:translateY(0) rotate(-2deg)}}
+
+.slide-msg .content{max-width:900px;text-align:center}
+.gallery{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:14px}
+.photo-placeholder{width:260px;height:260px;border-radius:16px;background:linear-gradient(180deg,#fff,#f6f9fb);display:flex;align-items:center;justify-content:center;border:6px solid #fff;box-shadow:0 8px 30px rgba(3,10,14,0.08);font-weight:700;color:#7aa0b1}
+.stickers-row{display:flex;flex-direction:column;align-items:center;gap:8px}
+
+.content{padding:18px}
+.slide-final .content{max-width:700px;text-align:center}
+.confetti{position:relative;height:200px}
+
+@media (max-width:800px){
+  .decor{display:none}
+  .hero h1{font-size:2rem}
+  .sticker{width:90px}
+}
