@@ -7,8 +7,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Simple password gate (client-side) -->
+  <div id="gate" class="gate">
+    <div class="gate-card">
+      <h2>Acceso privado</h2>
+      <p>Introduce el código para ver la sorpresa</p>
+      <input id="gateCode" placeholder="Código secreto" />
+      <div style="margin-top:12px">
+        <button id="gateBtn" class="btn">Entrar</button>
+      </div>
+      <p class="tiny">Comparte el código solo con Daniela.</p>
+    </div>
+  </div>
+
   <!-- Intro overlay with 10s countdown -->
-  <div id="overlay" class="overlay">
+  <div id="overlay" class="overlay hidden">
     <div class="overlay-card">
       <h2>¡Sorpresa, Daniela!</h2>
       <p class="sub">Prepárate... en</p>
@@ -18,7 +31,7 @@
   </div>
 
   <!-- Main slideshow container -->
-  <main id="slides" class="slides" tabindex="0">
+  <main id="slides" class="slides hidden" tabindex="0">
     <!-- Slide 1: cover -->
     <section class="slide slide-hero">
       <div class="decor decor-left">
@@ -43,7 +56,7 @@
         <p class="lead">Hoy celebramos tu vida, tus sueños y todo lo hermoso que traes al mundo.</p>
         <div class="gallery">
           <div class="card-img">
-            <!-- user photo placeholder: replace assets/dani-photo.jpg to use actual picture -->
+            <img id="daniPhoto" src="assets/dani-photo.jpg" alt="Daniela" onerror="this.style.display='none'">
             <div class="photo-placeholder">Tu foto aquí</div>
           </div>
           <div class="stickers-row">
@@ -60,15 +73,30 @@
       <div class="content">
         <h2>¡A celebrar!</h2>
         <p class="lead">Dale play a la canción y disfruta.</p>
-        <div class="music">
-          <a class="btn blue" id="playMusic" target="_blank" href="https://www.youtube.com/watch?v=T89IqbAF9Ik">Abrir canción (YouTube)</a>
+
+        <!-- Custom player (YouTube IFrame API) -->
+        <div class="player-wrap">
+          <div id="player"></div>
+          <div class="controls">
+            <button id="playPause" class="btn control">Play</button>
+            <div class="progress">
+              <div id="bar" class="bar"><div id="seek" class="seek"></div></div>
+            </div>
+            <div class="time"><span id="cur">0:00</span> / <span id="dur">0:00</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
           <button class="btn" id="confetti">Lanzar confetti</button>
         </div>
-        <div id="confettiCanvas" class="confetti"></div>
+
+        <div id="fireworks" class="fireworks"></div>
+        <div id="cake" class="cake" title="Torta de cumpleaños">🎂</div>
       </div>
     </section>
   </main>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js"></script>
 </body>
 </html>
